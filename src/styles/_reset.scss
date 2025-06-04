@@ -4,10 +4,19 @@
   box-sizing: border-box;
 }
 ul,
-ol {
+ul li {
   list-style: none;
 }
 
 a {
   color: inherit;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
 }
