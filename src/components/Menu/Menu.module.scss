@@ -1,0 +1,158 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.menuMain {
+  position: relative;
+}
+.menuProfile {
+  background-color: #ffffff;
+  width: 50%;
+  padding: 24px 56px 40px 56px;
+  max-width: 760px;
+
+  @media (max-width: 990px) {
+    width: 75%;
+  }
+  @media (max-width: 768px) {
+    padding: 14px 24px 24px;
+  }
+}
+.menuHeader {
+  display: flex;
+  align-items: center;
+  column-gap: 64px;
+  margin-bottom: 60px;
+
+  @media (max-width: 768px) {
+    column-gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
+  }
+  & > p {
+    font-weight: 400;
+    color: #7d7d7d;
+  }
+}
+
+.menuText {
+  padding-left: 104px;
+
+  @media (max-width: 768px) {
+    padding-left: 64px;
+  }
+
+  @media (max-width: 480px) {
+    padding-left: 0;
+  }
+}
+.ModalName {
+  font-size: clamp(24px, 6vw, 32px);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.modalDescription {
+  font-size: clamp(14px, 4vw, 16px);
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+.modalPhone {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 304px;
+
+  @media (max-width: 480px) {
+    margin-bottom: 64px;
+  }
+}
+.menuFooter {
+  padding-left: 104px;
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+
+  @media (max-width: 768px) {
+    padding-left: 64px;
+  }
+
+  @media (max-width: 480px) {
+    column-gap: 16px;
+    padding-left: 0;
+  }
+}
+.menuBtnClose {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 64px;
+
+  @media (max-width: 768px) {
+    top: 20px;
+    right: 32px;
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+
+.menuLinkImg {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  position: relative;
+  aspect-ratio: 1 / 1;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+  }
+
+  &::after {
+    background: url('../../assets/image/bigPartSquare.svg');
+    width: 12px;
+    height: 12px;
+    top: 18px;
+    left: 18px;
+  }
+  &::before {
+    background: url('../../assets/image/smallPartSquare.svg');
+    width: 6px;
+    height: 6px;
+    top: 16px;
+    left: 26px;
+  }
+}
+.menuLinkText {
+  color: #3e29e3;
+  font-weight: 500;
+  font-size: clamp(14px, 4vw, 16px);
+  cursor: pointer;
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
+}

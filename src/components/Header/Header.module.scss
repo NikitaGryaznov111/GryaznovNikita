@@ -1,0 +1,44 @@
+@use '../../styles/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.surname {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.name {
+  font-weight: 400;
+  color: #7d7d7d;
+}
+
+.burger {
+  height: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+
+  .burgerTop,
+  .burgerBottom {
+    background-color: #1b1b1b;
+    height: 2px;
+    display: block;
+    align-self: flex-end;
+  }
+  .burgerTop {
+    width: 32px;
+    margin-bottom: 6px;
+  }
+  .burgerBottom {
+    width: 24px;
+  }
+}

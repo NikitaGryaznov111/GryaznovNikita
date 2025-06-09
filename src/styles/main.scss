@@ -1,31 +1,44 @@
 @use './reset';
 @use './variables';
 @use './base';
-@font-face {
-  font-family: variables.$primary-font-family;
-  src: url('../assets/fonts/Graphik-Regular-Web.woff2');
-  font-weight: normal;
-  font-style: normal;
+@use './mixins';
+
+#container {
+  padding: 32px 64px 48px 64px;
+  margin: 0 auto;
+  display: block;
+
+  @media (max-width: 768px) {
+    padding: 22px 32px 38px 32px;
+  }
 }
-
-@font-face {
-  font-family: variables.$primary-font-family;
-  src: url('../assets/fonts/Graphik-Bold-Web.woff2');
-
-  font-weight: 700;
-  font-style: normal;
+#grid-container {
+  display: grid;
+  @include mixins.adaptiveGrid(desktop) {
+    grid-template-columns: repeat(12, minmax(60px, 80px));
+    gap: variables.$gap-desktop;
+    max-width: 1312px;
+    min-width: 1072px;
+  }
+  @include mixins.adaptiveGrid(tablet) {
+    grid-template-columns: repeat(8, minmax(56px, 88px));
+    gap: variables.$gap-tablet;
+    max-width: 928px;
+    min-width: 672px;
+  }
+  @include mixins.adaptiveGrid(mobile) {
+    grid-template-columns: repeat(4, minmax(56px, 88px));
+    gap: variables.$gap-mobile;
+    max-width: 424px;
+    min-width: 296px;
+  }
 }
-
-@font-face {
-  font-family: variables.$primary-font-family;
-  src: url('../assets/fonts/Graphik-RegularItalic-Web.woff2');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: variables.$primary-font-family;
-  src: url('../assets/fonts/Graphik-Black-Web.woff2');
-  font-weight: 900;
-  font-style: normal;
+#menu {
+  padding: 8px 0 8px 8px;
+  margin: 0 auto;
+  display: none;
+  background-image: url('../assets/image/bgMenu.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
