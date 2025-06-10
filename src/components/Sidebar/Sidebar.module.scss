@@ -1,0 +1,16 @@
+@use './../../styles/variables';
+
+.navItem:not(:last-child) {
+  margin-bottom: 16px;
+}
+.navItem {
+  font-weight: normal;
+  color: #7d7d7d;
+
+  & > a:hover {
+    color: variables.$primary-color;
+    cursor:
+      url('../../assets/images/cursor.svg'),
+      url('../../assets/images/cursor.png'), auto;
+  }
+}

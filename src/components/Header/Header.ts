@@ -8,16 +8,16 @@ export default function renderHeader(): void {
      <div class="${styles.header}">
       <div class="${styles.logoContainer}">
        <img src="/logo.svg" alt="Logo" class="${styles.logo}"> 
-        <div class="${styles.user}">
-            <p class="${styles.surname}">Грязнов</p>
-            <p class="${styles.name}">Никита Константинович</p>
-        </div>
+       <div class="${styles.user}">
+        <p class="${styles.surname}">Грязнов</p>
+        <p class="${styles.name}">Никита Константинович</p>
+       </div>
       </div>
         <button type="button" class="${styles.burger}" id="burger">
-        <span class="${styles.burgerTop}"></span>
-        <span class="${styles.burgerBottom}"></span>
+         <span class="${styles.burgerTop}"></span>
+         <span class="${styles.burgerBottom}"></span>
         </button>
-      </div>`
+     </div>`
 
   const container = document.getElementById('container')
   const burger = document.getElementById('burger')

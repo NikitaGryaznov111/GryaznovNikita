@@ -20,7 +20,7 @@ export default function renderMenu(): void {
         <a href="https://t.me/nikita_gryaznov13" class="${styles.menuLinkText}">Ссылка на соцсеть/мессенджер</a>
       </div>
     </div>  
-      <button id="menuBtnClose" class="${styles.menuBtnClose}"></button>
+    <button id="menuBtnClose" class="${styles.menuBtnClose}"></button>
   </div>`
 
   const menuBtnClose = document.getElementById('menuBtnClose')

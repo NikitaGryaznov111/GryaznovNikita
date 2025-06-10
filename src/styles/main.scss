@@ -12,7 +12,11 @@
     padding: 22px 32px 38px 32px;
   }
 }
-#grid-container {
+#sidebar {
+  position: fixed;
+  margin-top: 216px;
+}
+#gridContainer {
   display: grid;
   @include mixins.adaptiveGrid(desktop) {
     grid-template-columns: repeat(12, minmax(60px, 80px));
@@ -37,7 +41,7 @@
   padding: 8px 0 8px 8px;
   margin: 0 auto;
   display: none;
-  background-image: url('../assets/image/bgMenu.png');
+  background-image: url('../assets/images/bgMenu.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
