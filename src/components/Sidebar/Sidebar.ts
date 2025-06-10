@@ -5,7 +5,7 @@ export default function renderSidebar(): void {
   sidebar.innerHTML = ` 
      <nav>
         <ul class="${styles.navList}">
-          <li class="${styles.navItem}"><a href="#partingWord">Напутственное слово</a></li>
+          <li class="${styles.navItem}"><a href="#greeting">Напутственное слово</a></li>
           <li class="${styles.navItem}"><a href="#grid">Сетка</a></li>
           <li class="${styles.navItem}"><a href="#typography">Типографика</a></li>
           <li class="${styles.navItem}"><a href="#ui">UI</a></li>
