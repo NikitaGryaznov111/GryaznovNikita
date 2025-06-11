@@ -1,4 +1,4 @@
-@mixin adaptiveGrid($breakpoint) {
+@mixin grid($breakpoint) {
   @if $breakpoint == mobile {
     @media (max-width: 735px) {
       @content;

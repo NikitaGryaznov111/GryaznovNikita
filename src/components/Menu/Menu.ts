@@ -10,10 +10,10 @@ export default function renderMenu(): void {
         <p>Задание выполнил</p>
       </div>
       <div class="${styles.menuText}">
-        <h1 class="${styles.ModalName}">Грязнов Никита Константинович</h1>
-        <p class="${styles.modalDescription}">Краткое описание. Например, студент 4 курса специальности «Прикладная информатика» в
+        <h1 class="${styles.menuName}">Грязнов Никита Константинович</h1>
+        <p class="${styles.menuDescription}">Краткое описание. Например, студент 4 курса специальности «Прикладная информатика» в
           КузГТУ</p>
-        <p class="${styles.modalPhone}">+7 (952) 683-86-45</p>
+        <p class="${styles.menuPhone}">+7 (952) 683-86-45</p>
       </div>
       <div class="${styles.menuFooter}">
         <a href="https://t.me/nikita_gryaznov13" class="${styles.menuLinkImg}"></a>

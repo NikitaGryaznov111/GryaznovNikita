@@ -39,6 +39,9 @@
   font-weight: 900;
   font-style: normal;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: variables.$primary-font-family;
   font-size: variables.$primary-font-size;

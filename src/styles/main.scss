@@ -15,39 +15,23 @@
 #sidebar {
   position: fixed;
   margin-top: 216px;
+  @media (max-width: 768px) {
+    position: static;
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 #main {
   margin-left: 312px;
   margin-top: 48px;
-
+  max-width: 904px;
   @media (max-width: 768px) {
-    margin-left: 212px;
-  }
-  @media (max-width: 480px) {
-    margin-left: 155px;
+    margin-left: 0px;
   }
 }
-// #gridContainer {
-//   display: grid;
-//   @include mixins.adaptiveGrid(desktop) {
-//     grid-template-columns: repeat(12, minmax(60px, 80px));
-//     gap: variables.$gap-desktop;
-//     max-width: 1312px;
-//     min-width: 1072px;
-//   }
-//   @include mixins.adaptiveGrid(tablet) {
-//     grid-template-columns: repeat(8, minmax(56px, 88px));
-//     gap: variables.$gap-tablet;
-//     max-width: 928px;
-//     min-width: 672px;
-//   }
-//   @include mixins.adaptiveGrid(mobile) {
-//     grid-template-columns: repeat(4, minmax(56px, 88px));
-//     gap: variables.$gap-mobile;
-//     max-width: 424px;
-//     min-width: 296px;
-//   }
-// }
+
 #menu {
   padding: 8px 0 8px 8px;
   margin: 0 auto;

@@ -1,5 +1,14 @@
 @use './../../styles/variables';
 
+.navList {
+  @media (max-width: 768px) {
+    display: flex;
+    column-gap: 35px;
+  }
+  @media (max-width: 480px) {
+    column-gap: 7px;
+  }
+}
 .navItem:not(:last-child) {
   margin-bottom: 16px;
 }
