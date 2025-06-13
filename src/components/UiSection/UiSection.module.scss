@@ -14,6 +14,13 @@
   grid-template-columns: repeat(3, auto);
   gap: 32px;
   align-self: flex-end;
+
+  @media (max-width: 1140px) {
+    grid-template-columns: repeat(2, auto);
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, auto);
+  }
 }
 .uiInputContainer {
   align-self: flex-end;
@@ -32,32 +39,66 @@
   }
 }
 // Стилизуем инпут при наведении
+
 .hoverText {
   font-weight: 400;
   color: #7d7d7d;
   margin-bottom: 40px;
-  display: block;
+  opacity: 0;
 }
-
+.uiInputContainer:hover .hoverText {
+  opacity: 1;
+}
 .hoverState:hover {
   cursor:
     url('../../assets/images/cursor.svg'),
     url('../../assets/images/cursor.png'), auto;
   border-bottom: 2px solid #3e29e3;
 }
+
 // Стилизуем инпут при вводе
 .inputText {
   font-weight: 400;
   color: #7d7d7d;
   margin-bottom: 16px;
-  display: block;
+  opacity: 0;
 }
 .inputTextEmail {
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   color: #7d7d7d;
-  display: block;
+  margin-bottom: 4px;
+  opacity: 0;
 }
 .inputState {
+  border-bottom: 4px solid #3e29e3 !important;
+  transition: border-color 0.3s ease;
+}
+
+// Стилизуем инпут при ошибке
+.errorText {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #7d7d7d;
+  opacity: 0;
+}
+.errorTextEmail {
+  font-weight: 400;
+  font-size: 12px;
+  color: #e80f3b;
+  margin-bottom: 4px;
+  opacity: 0;
+}
+.errorState {
+  border-bottom: 4px solid #e80f3b !important;
+  transition: border-color 0.3s ease;
+  margin-bottom: 6px;
+}
+.errorMessage {
+  font-weight: 400;
+  font-size: 14px;
+  color: #e80f3b;
+  display: none;
 }
