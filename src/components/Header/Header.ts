@@ -27,4 +27,21 @@ export default function renderHeader(): void {
       menu.style.display = 'block'
     })
   }
+
+  // Функция для расположения кнопки закрытия меню с учетом ширины вертикального скролла
+  function alignElementsHorizontally(): void {
+    const menuBtnClose = document.getElementById('menuBtnClose')
+    const clientWidth = document.documentElement.clientWidth
+    const scrollWidth = window.innerWidth - clientWidth
+
+    if (!burger || !menuBtnClose) return
+
+    menuBtnClose.style.right = `${64 + scrollWidth}px`
+    if (window.innerWidth < 768) {
+      menuBtnClose.style.right = `${32 + scrollWidth}px`
+    }
+  }
+  window.addEventListener('load', alignElementsHorizontally)
+  window.addEventListener('resize', alignElementsHorizontally)
+  window.addEventListener('scroll', alignElementsHorizontally)
 }

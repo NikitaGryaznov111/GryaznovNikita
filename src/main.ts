@@ -5,6 +5,7 @@ import renderHeader from './components/Header/Header'
 import renderMenu from './components/Menu/Menu'
 import renderSidebar from './components/Sidebar/Sidebar'
 import renderTypographySection from './components/TypographySection/TypographySection'
+import renderUiSection from './components/UiSection/UiSection'
 
 renderHeader()
 renderMenu()
@@ -12,3 +13,4 @@ renderSidebar()
 renderGreetingSection()
 renderGridSection()
 renderTypographySection()
+renderUiSection()

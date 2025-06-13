@@ -1,0 +1,63 @@
+.uiTitle {
+  font-weight: bold;
+  font-size: clamp(28px, 4vw, 32px);
+  margin-bottom: 48px;
+}
+.uiSubtitle {
+  font-weight: 500;
+  font-size: clamp(20px, 4vw, 24px);
+  margin-bottom: 92px;
+}
+
+.uiInputs {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 32px;
+  align-self: flex-end;
+}
+.uiInputContainer {
+  align-self: flex-end;
+}
+.uiInputContainer > input {
+  border: none;
+  outline: none;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #aeadae;
+  transition: border-color 0.3s ease;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    color: #1b1b1b;
+  }
+}
+// Стилизуем инпут при наведении
+.hoverText {
+  font-weight: 400;
+  color: #7d7d7d;
+  margin-bottom: 40px;
+  display: block;
+}
+
+.hoverState:hover {
+  cursor:
+    url('../../assets/images/cursor.svg'),
+    url('../../assets/images/cursor.png'), auto;
+  border-bottom: 2px solid #3e29e3;
+}
+// Стилизуем инпут при вводе
+.inputText {
+  font-weight: 400;
+  color: #7d7d7d;
+  margin-bottom: 16px;
+  display: block;
+}
+.inputTextEmail {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7d7d7d;
+  display: block;
+}
+.inputState {
+}
