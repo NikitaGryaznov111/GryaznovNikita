@@ -13,3 +13,17 @@
     }
   }
 }
+
+@mixin sectionUiGrid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 32px;
+  align-self: flex-end;
+
+  @media (max-width: 1140px) {
+    grid-template-columns: repeat(2, auto);
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, auto);
+  }
+}

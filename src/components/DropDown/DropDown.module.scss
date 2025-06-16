@@ -1,0 +1,83 @@
+@use '../../styles/mixins';
+.dropdownTitle {
+  margin-top: 64px;
+  font-weight: 500;
+  font-size: clamp(20px, 4vw, 24px);
+  margin-bottom: 24px;
+}
+.dropdownDescription {
+  font-weight: 400;
+  font-size: 16;
+  margin-bottom: 48px;
+}
+.dropdownGrid {
+  @include mixins.sectionUiGrid;
+}
+.dropdownContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #aeadae;
+  padding-bottom: 6px;
+
+  & button {
+    font-size: 16px;
+  }
+}
+.arrow {
+  width: 8px;
+  height: 8px;
+  border-top: 3px solid #3e29e3;
+  border-right: 3px solid #3e29e3;
+  display: inline-block;
+  transform: rotate(135deg);
+}
+
+// Список при наведении
+.dropdownContainerHover:hover {
+  border-bottom: 2px solid #3e29e3 !important;
+  transition: border-color 0.3s ease;
+  cursor:
+    url('../../assets/images/cursor.svg'),
+    url('../../assets/images/cursor.png'), auto;
+  & > button {
+    cursor:
+      url('../../assets/images/cursor.svg'),
+      url('../../assets/images/cursor.png'), auto;
+  }
+}
+// Стилизация при выборе элемента из списка
+.dropdownContainerList {
+  position: relative;
+}
+.dropdownLabel {
+  position: absolute;
+  top: -23px;
+  display: none;
+}
+.dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: none;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+  transition: max-height 0.3s ease;
+
+  & > li {
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-bottom: 8px;
+
+    &:hover {
+      background-color: #3e29e3;
+      color: #ffffff;
+      cursor:
+        url('../../assets/images/cursor.svg'),
+        url('../../assets/images/cursor.png'), auto;
+    }
+  }
+}
