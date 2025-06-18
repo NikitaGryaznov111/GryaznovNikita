@@ -1,4 +1,7 @@
 @use '../../styles/mixins';
+.dropdown {
+  margin-bottom: 232px;
+}
 .dropdownTitle {
   margin-top: 64px;
   font-weight: 500;
@@ -15,13 +18,15 @@
 }
 .dropdownContainer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #aeadae;
   padding-bottom: 6px;
+  position: relative;
 
   & button {
     font-size: 16px;
+    flex-grow: 1;
+    text-align: justify;
   }
 }
 .arrow {
@@ -30,13 +35,18 @@
   border-top: 3px solid #3e29e3;
   border-right: 3px solid #3e29e3;
   display: inline-block;
-  transform: rotate(135deg);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(calc(-50% - 4px)) rotate(135deg);
 }
 
-// Список при наведении
+.dropdownContainerHoverDefault {
+  border-bottom: 2px solid #3e29e3 !important;
+}
+
 .dropdownContainerHover:hover {
   border-bottom: 2px solid #3e29e3 !important;
-  transition: border-color 0.3s ease;
   cursor:
     url('../../assets/images/cursor.svg'),
     url('../../assets/images/cursor.png'), auto;
@@ -46,24 +56,59 @@
       url('../../assets/images/cursor.png'), auto;
   }
 }
-// Стилизация при выборе элемента из списка
+
+.dropdownContainerListDefault {
+  position: relative;
+  grid-column-start: -1;
+  grid-column-end: -2;
+}
 .dropdownContainerList {
   position: relative;
+  @media (max-width: 480px) {
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
 }
+.dropdownLabelDefault,
 .dropdownLabel {
   position: absolute;
   top: -23px;
+}
+.dropdownLabel {
   display: none;
 }
-.dropdownList {
+.dropdownListDefault {
   position: absolute;
-  top: 100%;
-  left: 0;
   width: 100%;
   background-color: #fff;
   border-top: none;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
   transition: max-height 0.3s ease;
+
+  & > li {
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-bottom: 8px;
+
+    &:nth-child(3) {
+      color: #3d28e1;
+    }
+    &:last-child {
+      background-color: #3e29e3;
+      color: #ffffff;
+    }
+  }
+}
+.dropdownList {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border-top: none;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+  transition: max-height 0.3s ease;
+  display: none;
 
   & > li {
     font-size: 16px;
@@ -80,4 +125,10 @@
         url('../../assets/images/cursor.png'), auto;
     }
   }
+}
+.dropdownBtnSelect {
+  width: 150px;
+}
+.activeItem {
+  color: #3d28e1;
 }

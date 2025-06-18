@@ -23,37 +23,26 @@
     color: #1b1b1b;
   }
 }
-// Стилизуем инпут при наведении
 
-.hoverText {
-  font-weight: 400;
-  color: #7d7d7d;
-  margin-bottom: 40px;
-  opacity: 0;
-}
-.textFieldItem:hover .hoverText {
-  opacity: 1;
-}
-.hoverState:hover {
+.interactiveInput:hover {
   cursor:
     url('../../assets/images/cursor.svg'),
     url('../../assets/images/cursor.png'), auto;
   border-bottom: 2px solid #3e29e3;
 }
-
-// Стилизуем инпут при вводе
-.inputText {
-  font-weight: 400;
-  color: #7d7d7d;
-  margin-bottom: 16px;
-  opacity: 0;
+.hoverState {
+  border-bottom: 2px solid #3e29e3 !important;
 }
-.inputTextEmail {
+
+.textEmailDefault,
+.textEmail {
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   color: #7d7d7d;
   margin-bottom: 4px;
+}
+.textEmail {
   opacity: 0;
 }
 .inputState {
@@ -62,32 +51,30 @@
 }
 
 // Стилизуем инпут при ошибке
-.errorText {
-  margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 14px;
-  color: #7d7d7d;
-  opacity: 0;
-}
+
 .errorTextEmail {
   font-weight: 400;
   font-size: 12px;
   color: #e80f3b;
-  margin-bottom: 4px;
-  opacity: 0;
+  margin-bottom: 6px;
 }
+
 .errorState {
   border-bottom: 4px solid #e80f3b !important;
   transition: border-color 0.3s ease;
 }
+.textFieldItem:first-child,
 .textFieldItem:last-child {
   position: relative;
 }
-.errorMessage {
+.errorMessage,
+.errorMessageDefault {
   font-weight: 400;
   font-size: 14px;
   color: #e80f3b;
-  display: none;
   position: absolute;
   bottom: -20px;
+}
+.errorMessage {
+  display: none;
 }
