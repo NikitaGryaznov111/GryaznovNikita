@@ -1,0 +1,53 @@
+.checkbox {
+  margin-bottom: 64px;
+}
+.checkboxTitle {
+  font-weight: 500;
+  font-size: clamp(20px, 4vw, 24px);
+  margin-bottom: 32px;
+}
+.checkboxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+}
+.checkboxItem,
+.radioItem {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+.checkboxLabel,
+.radioLabel {
+  font-weight: 400;
+  font-size: 16px;
+}
+.checkboxItem > input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.customCheckboxOne,
+.customCheckboxTwo,
+.customCheckboxThree {
+  width: 24px;
+  height: 24px;
+}
+.customCheckboxOne {
+  border: 2px solid #aeadae;
+  & + .checkboxLabel {
+    opacity: 0.8;
+  }
+}
+.customCheckboxTwo {
+  border: 2px solid #3e29e3;
+}
+.customCheckboxThree {
+  background-color: #3e29e3;
+}

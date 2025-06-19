@@ -1,3 +1,5 @@
+import renderButtons from '../Buttons/Buttons'
+import renderCheckbox from '../Checkbox/Checkbox'
 import renderDropDown from '../DropDown/DropDown'
 import renderTextField from '../TextField/TextField'
 import styles from './UiSection.module.scss'
@@ -13,4 +15,6 @@ export default function renderUiSection(): void {
   // Рендерю блоки UI секции:
   renderTextField()
   renderDropDown()
+  renderButtons()
+  renderCheckbox()
 }
