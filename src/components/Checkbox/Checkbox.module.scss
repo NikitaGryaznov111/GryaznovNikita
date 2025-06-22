@@ -10,6 +10,14 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 32px;
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+.leftGroup {
+  @media (max-width: 480px) {
+    margin-bottom: 30px;
+  }
 }
 .checkboxItem,
 .radioItem {
@@ -27,7 +35,19 @@
   font-weight: 400;
   font-size: 16px;
 }
-.checkboxItem > input {
+.interactiveCheckboxItem:hover {
+  cursor:
+    url('../../assets/images/cursor.svg'),
+    url('../../assets/images/cursor.png'), auto;
+  & > .checkboxLabel {
+    opacity: 1;
+  }
+  & > .customCheckboxOne {
+    border: 2px solid #3e29e3;
+  }
+}
+.checkboxItem > input,
+.radioItem > input {
   position: absolute;
   opacity: 0;
   height: 0;
@@ -36,7 +56,7 @@
 .customCheckboxOne,
 .customCheckboxTwo,
 .customCheckboxThree {
-  width: 24px;
+  min-width: 24px;
   height: 24px;
 }
 .customCheckboxOne {
@@ -48,6 +68,83 @@
 .customCheckboxTwo {
   border: 2px solid #3e29e3;
 }
+.markedCheckbox,
 .customCheckboxThree {
   background-color: #3e29e3;
+  position: relative;
+  border: 2px solid #3e29e3;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 10px;
+    background-color: #ffff;
+    clip-path: polygon(
+      40.5106% 70.4317%,
+      84.848% 2.09939%,
+      99.5033% 11.7703%,
+      45.8234% 100.201%,
+      0.349461% 57.8482%,
+      12.176% 43.7225%
+    );
+  }
+  & + .checkboxLabel {
+    opacity: 1;
+  }
+}
+// Стили для radio input
+.customRadioOne,
+.customRadioTwo,
+.customRadioThree {
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.customRadioOne {
+  border: 2px solid #aeadae;
+  & + .radioLabel {
+    opacity: 0.8;
+  }
+}
+.customRadioTwo {
+  border: 2px solid #3e29e3;
+}
+
+.customRadioThree,
+.markedRadio {
+  border: 2px solid #3e29e3 !important;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #3e29e3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  & + .radioLabel {
+    opacity: 1;
+  }
+}
+.interactiveRadioItem:hover {
+  cursor:
+    url('../../assets/images/cursor.svg'),
+    url('../../assets/images/cursor.png'), auto;
+  & > .radioLabel {
+    opacity: 1;
+  }
+  & > .customRadioOne {
+    border: 2px solid #3e29e3;
+  }
 }
