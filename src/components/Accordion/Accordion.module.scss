@@ -1,0 +1,71 @@
+.accordionTile {
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: clamp(20px, 4vw, 24px);
+}
+
+.accordionItemOne {
+  border-bottom: 1px solid #cbcbcc;
+  & p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+.detailsTitle {
+  font-weight: 500;
+  font-size: 16px;
+  color: #7d7d7d;
+  padding-bottom: 15px;
+  &:hover {
+    cursor:
+      url('../../assets/images/cursor.svg'),
+      url('../../assets/images/cursor.png'), auto;
+    border-bottom: 1px solid #3e29e3;
+    color: #1b1b1b;
+  }
+}
+.details[open] > .detailsTitle {
+  border: none;
+  color: #3e29e3;
+}
+.detailsContent {
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 9px;
+  padding-bottom: 30px;
+}
+
+.accordionItemTwo {
+  margin: 24px 0px;
+  border-bottom: 1px solid #3e29e3;
+  padding-bottom: 15px;
+  & > p {
+    color: #1b1b1b;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+.accordionItemThree {
+  border-bottom: 2px solid #3e29e3;
+  & summary {
+    font-weight: 500;
+    font-size: 16px;
+    color: #3e29e3;
+    cursor: default;
+  }
+  & p {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 24px;
+    line-height: 1.5;
+    padding-bottom: 30px;
+  }
+}
+
+.accordionActive {
+  border-bottom: 2px solid #3e29e3;
+  & summary {
+    color: #3e29e3;
+  }
+}

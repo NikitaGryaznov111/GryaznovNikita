@@ -1,3 +1,4 @@
+import renderAccordion from '../Accordion/Accordion'
 import renderButtons from '../Buttons/Buttons'
 import renderCheckbox from '../Checkbox/Checkbox'
 import renderDropDown from '../DropDown/DropDown'
@@ -17,4 +18,5 @@ export default function renderUiSection(): void {
   renderDropDown()
   renderButtons()
   renderCheckbox()
+  renderAccordion()
 }
