@@ -1,4 +1,5 @@
 import './/styles/main.scss'
+import renderFooter from './components/Footer/Footer'
 import renderGreetingSection from './components/GreetingSection/GreetingSection'
 import renderGridSection from './components/GridSection/GridSection'
 import renderHeader from './components/Header/Header'
@@ -14,3 +15,4 @@ renderGreetingSection()
 renderGridSection()
 renderTypographySection()
 renderUiSection()
+renderFooter()

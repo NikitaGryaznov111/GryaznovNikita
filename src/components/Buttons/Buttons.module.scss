@@ -9,9 +9,9 @@
   margin-bottom: 76px;
 }
 .buttonsGrid {
-  @include mixins.sectionUiGrid;
-  column-gap: 164px;
+  column-gap: 164px !important;
   justify-content: flex-start;
+  @include mixins.sectionUiGrid;
 }
 .buttonsItem {
   padding: 16px 32px;
