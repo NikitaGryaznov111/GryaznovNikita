@@ -10,9 +10,9 @@ import renderUiSection from './components/UiSection/UiSection'
 
 renderHeader()
 renderMenu()
-renderSidebar()
 renderGreetingSection()
 renderGridSection()
 renderTypographySection()
 renderUiSection()
+renderSidebar()
 renderFooter()

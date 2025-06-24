@@ -14,12 +14,20 @@
 }
 .navItem {
   font-weight: normal;
+}
+.navLink {
   color: #7d7d7d;
-
-  & > a:hover {
+  &:hover {
     color: variables.$primary-color;
     cursor:
       url('../../assets/images/cursor.svg'),
       url('../../assets/images/cursor.png'), auto;
+  }
+}
+.activeLink {
+  color: #3e29e3;
+
+  &:hover {
+    color: #3e29e3;
   }
 }
