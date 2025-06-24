@@ -1,3 +1,16 @@
+/**
+ * Рендерит шапку страницы с логотипом, ФИО и бургер-меню.
+ *
+ * Функция:
+ * 1. Находит элемент с id "header" и вставляет внутрь него разметку шапки.
+ * 2. Если найдены элементы "burger", "container" и "menu", добавляет обработчик клика на бургер,
+ *    который скрывает контент и показывает меню.
+ * 3. Определяет приватную функцию `alignElementsHorizontally`, которая вычисляет ширину скролла
+ *    и корректно позиционирует кнопку закрытия меню по правому краю.
+ * 4. Подписывается на события `load`, `resize` и `scroll` для динамической корректировки позиции.
+ *
+ * @returns {void} Ничего не возвращает.
+ */
 import styles from './Header.module.scss'
 export default function renderHeader(): void {
   const header = document.getElementById('header')
@@ -28,7 +41,6 @@ export default function renderHeader(): void {
     })
   }
 
-  // Функция для расположения кнопки закрытия меню с учетом ширины вертикального скролла
   function alignElementsHorizontally(): void {
     const menuBtnClose = document.getElementById('menuBtnClose')
     const clientWidth = document.documentElement.clientWidth

@@ -16,7 +16,6 @@
   line-height: 24px;
   margin-bottom: 48px;
 }
-
 .gridDeviceName {
   font-weight: 500;
   font-size: clamp(20px, 4vw, 24px);
@@ -25,30 +24,33 @@
 .gridDeviceName:not(:first-of-type) {
   margin-top: 64px;
 }
-
 .gridContainer {
   margin-bottom: 48px;
   display: grid;
   @include mixins.grid(desktop) {
     grid-template-columns: repeat(12, auto);
-    gap: variables.$gap-desktop;
+    column-gap: variables.$gap-desktop;
     max-width: 1312px;
     min-width: 1072px;
   }
   @include mixins.grid(tablet) {
     grid-template-columns: repeat(8, auto);
-    gap: variables.$gap-tablet;
+    column-gap: variables.$gap-tablet;
     max-width: 928px;
     min-width: 672px;
   }
   @include mixins.grid(mobile) {
     grid-template-columns: repeat(4, auto);
-    gap: variables.$gap-mobile;
+    column-gap: variables.$gap-mobile;
     max-width: 424px;
     min-width: 296px;
   }
-}
 
+  @media (max-width: 420px) {
+    grid-template-columns: repeat(2, auto);
+    row-gap: 15px;
+  }
+}
 .gridItemTitle {
   font-weight: 400;
   color: #7d7d7d;

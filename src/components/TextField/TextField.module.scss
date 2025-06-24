@@ -23,7 +23,6 @@
     color: #1b1b1b;
   }
 }
-
 .interactiveInput:hover {
   cursor:
     url('../../assets/images/cursor.svg'),
@@ -33,7 +32,6 @@
 .hoverState {
   border-bottom: 2px solid #3e29e3 !important;
 }
-
 .textEmailDefault,
 .textEmail {
   margin-bottom: 4px;
@@ -51,14 +49,12 @@
 }
 
 // Стилизуем инпут при ошибке
-
 .errorTextEmail {
   font-weight: 400;
   font-size: 12px;
   color: #e80f3b;
   margin-bottom: 6px;
 }
-
 .errorState {
   border-bottom: 4px solid #e80f3b !important;
   transition: border-color 0.3s ease;

@@ -1,3 +1,15 @@
+/**
+ * Рендерит открывающееся меню с информацией о кандидате и кнопкой закрытия.
+ *
+ * Функция:
+ * 1. Находит элемент с id "menu" в DOM.
+ * 2. Если элемент найден, вставляет внутрь него разметку меню с логотипом,
+ *    ФИО, описанием, телефоном и ссылкой на мессенджер.
+ * 3. Добавляет обработчик клика на кнопку закрытия меню, который скрывает меню
+ *    и снова отображает основной контент (container).
+ *
+ * @returns {void} Ничего не возвращает.
+ */
 import styles from './Menu.module.scss'
 export default function renderMenu(): void {
   const menu = document.getElementById('menu')
@@ -11,8 +23,7 @@ export default function renderMenu(): void {
       </div>
       <div class="${styles.menuText}">
         <h1 class="${styles.menuName}">Грязнов Никита Константинович</h1>
-        <p class="${styles.menuDescription}">Краткое описание. Например, студент 4 курса специальности «Прикладная информатика» в
-          КузГТУ</p>
+        <p class="${styles.menuDescription}">Самостоятельно обучаюсь фронтенд-разработке, не имею коммерческого опыта, но готов постоянно развиваться и получать новые знания.</p>
         <p class="${styles.menuPhone}">+7 (952) 683-86-45</p>
       </div>
       <div class="${styles.menuFooter}">

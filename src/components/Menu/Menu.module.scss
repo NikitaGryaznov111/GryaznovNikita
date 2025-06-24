@@ -24,7 +24,7 @@
   margin-bottom: 60px;
 
   @media (max-width: 768px) {
-    column-gap: 40px;
+    column-gap: 24px;
     margin-bottom: 40px;
   }
 
@@ -38,7 +38,6 @@
     color: #7d7d7d;
   }
 }
-
 .menuText {
   padding-left: 104px;
 
@@ -114,7 +113,6 @@
     transform: rotate(-45deg);
   }
 }
-
 .menuLinkImg {
   width: 48px;
   height: 48px;
@@ -130,7 +128,6 @@
     position: absolute;
     content: '';
   }
-
   &::after {
     background: url('../../assets/images/bigPartSquare.svg');
     width: 12px;

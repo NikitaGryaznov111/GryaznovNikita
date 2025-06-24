@@ -1,3 +1,13 @@
+/**
+ * Рендерит приветственную секцию на главной странице.
+ *
+ * Функция:
+ * 1. Находит элемент с id "main" в DOM.
+ * 2. Если элемент найден, вставляет внутрь него HTML-разметку с заголовком,
+ *    уровнем задания и описанием тестового задания.
+ *
+ * @returns {void} Ничего не возвращает.
+ */
 import styles from './GreetingSection.module.scss'
 
 export default function renderGreetingSection(): void {

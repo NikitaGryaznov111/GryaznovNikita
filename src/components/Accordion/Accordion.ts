@@ -7,9 +7,9 @@ export default function renderAccordion(): void {
         <h3 class="${styles.accordionTile}">Аккордеон</h3>
         <div class="${styles.accordionContainer}">
           <div class="${styles.accordionItemOne}" id="accordionItemInteractive">
-            <details class="${styles.details}">
-              <summary class="${styles.detailsTitle}" id="detailsInteractive">Аккордеон</summary>
-              <p class="${styles.detailsContent}">Гоpдость полными вагонами золотыми погонами <br>
+            <details class="${styles.details}" id="details">
+              <summary class="${styles.detailsTitle}" id="detailsTitle">Аккордеон</summary>
+              <p class="${styles.detailsContent}" id="detailsContent">Гоpдость полными вагонами золотыми погонами <br>
                 С юга дyют молодые вет… <br>
                 Pазpывая в клочья облака не забыли шлют из далека <br>
                 С дома мама И не последняя любовь <br>
@@ -43,20 +43,51 @@ export default function renderAccordion(): void {
   const detailsDefault = document.getElementById(
     'detailsDefault'
   ) as HTMLDetailsElement | null
-  const detailsInteractive = document.getElementById(
-    'detailsInteractive'
-  ) as HTMLDetailsElement | null
+  const detailsTitle = document.getElementById('detailsTitle')
   const accordionItemInteractive = document.getElementById(
     'accordionItemInteractive'
   )
-  if (detailsDefault && detailsInteractive && accordionItemInteractive) {
-    detailsDefault.addEventListener('click', (event) => {
-      if (detailsDefault.open) {
-        event.preventDefault()
-      }
-    })
-    detailsInteractive.addEventListener('click', () => {
-      accordionItemInteractive.classList.toggle(styles.accordionActive)
-    })
-  }
+  const details = document.getElementById(
+    'details'
+  ) as HTMLDetailsElement | null
+  const detailsContent = document.getElementById('detailsContent')
+  if (
+    !detailsDefault ||
+    !detailsTitle ||
+    !accordionItemInteractive ||
+    !details ||
+    !detailsContent
+  )
+    return
+
+  detailsDefault.addEventListener('click', (event) => {
+    if (detailsDefault.open) {
+      event.preventDefault()
+    }
+  })
+  detailsTitle.addEventListener('click', () => {
+    accordionItemInteractive.classList.toggle(styles.accordionActive)
+  })
+  // requestAnimationFrame(() => {
+  //   if (!details.open) {
+  //     detailsContent.style.maxHeight = '0'
+  //   } else {
+  //     detailsContent.style.maxHeight = `${detailsContent.scrollHeight}px`
+  //   }
+  // })
+  // details.addEventListener('toggle', () => {
+  //   if (details.open) {
+  //     detailsContent.style.maxHeight = '0'
+
+  //     requestAnimationFrame(() => {
+  //       detailsContent.style.maxHeight = `${detailsContent.scrollHeight}px`
+  //     })
+  //   } else {
+  //     detailsContent.style.maxHeight = `${detailsContent.scrollHeight}px`
+
+  //     requestAnimationFrame(() => {
+  //       detailsContent.style.maxHeight = '0'
+  //     })
+  //   }
+  // })
 }

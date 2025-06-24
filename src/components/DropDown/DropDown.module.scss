@@ -1,6 +1,9 @@
 @use '../../styles/mixins';
 .dropdown {
   margin-bottom: 232px;
+  @media (max-width: 480px) {
+    margin-bottom: 64px;
+  }
 }
 .dropdownTitle {
   margin-top: 64px;
@@ -29,6 +32,9 @@
     text-align: justify;
   }
 }
+.dropdownContainerListDefault .arrow {
+  transform: translateY(calc(-50% - 4px)) rotate(315deg);
+}
 .arrow {
   width: 8px;
   height: 8px;
@@ -40,11 +46,9 @@
   right: 0;
   transform: translateY(calc(-50% - 4px)) rotate(135deg);
 }
-
 .dropdownContainerHoverDefault {
   border-bottom: 2px solid #3e29e3 !important;
 }
-
 .dropdownContainerHover:hover {
   border-bottom: 2px solid #3e29e3 !important;
   cursor:
@@ -56,7 +60,6 @@
       url('../../assets/images/cursor.png'), auto;
   }
 }
-
 .dropdownContainerListDefault {
   position: relative;
   grid-column-start: -1;
