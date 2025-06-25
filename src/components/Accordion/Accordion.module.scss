@@ -12,6 +12,37 @@
     line-height: 1.5;
   }
 }
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    max-height: 0px;
+  }
+  100% {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+@keyframes fadeInDownBack {
+  100% {
+    opacity: 1;
+    max-height: 500px;
+  }
+  0% {
+    opacity: 0;
+    max-height: 0px;
+  }
+}
+.details[open] {
+  animation-name: fadeInDown;
+  animation-duration: 0.75s;
+}
+
+.details:not([open]) {
+  animation-name: fadeInDownBack;
+  animation-duration: 0.75s;
+}
+
 .detailsTitle {
   font-weight: 500;
   font-size: 16px;
@@ -34,6 +65,8 @@
   font-size: 16px;
   margin-top: 9px;
   padding-bottom: 30px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }
 
 .accordionItemTwo {

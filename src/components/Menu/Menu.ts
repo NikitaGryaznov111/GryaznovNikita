@@ -23,7 +23,7 @@ export default function renderMenu(): void {
       </div>
       <div class="${styles.menuText}">
         <h1 class="${styles.menuName}">Грязнов Никита Константинович</h1>
-        <p class="${styles.menuDescription}">Самостоятельно обучаюсь фронтенд-разработке, не имею коммерческого опыта, но готов постоянно развиваться и получать новые знания.</p>
+        <p class="${styles.menuDescription}">Самостоятельно обучаюсь фронтенд-разработке и программированию, имею огромное желание работать, развиваться и получать новые знания.</p>
         <p class="${styles.menuPhone}">+7 (952) 683-86-45</p>
       </div>
       <div class="${styles.menuFooter}">

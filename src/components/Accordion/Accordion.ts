@@ -1,3 +1,14 @@
+/**
+ * Рендерит HTML-структуру аккордеона и добавляет обработчики событий.
+ *
+ * Функция вставляет разметку аккордеона в элемент с id="ui".
+ * Также настраивает поведение элементов <details>:
+ * - Запрещает открытие последнего аккордеона по клику (он открыт по умолчанию).
+ * - Подключает активный класс при клике на первый аккордеон.
+ *
+ * @function renderAccordion
+ * @returns {void}
+ */
 import styles from './Accordion.module.scss'
 export default function renderAccordion(): void {
   const uiSection = document.getElementById('ui')
@@ -16,7 +27,7 @@ export default function renderAccordion(): void {
                 А по небy бегyт видишь чьи-то следы <br>
                 Это может быть ты это может быть я <br>
                 Это может наш дрyг <br>
-                Это может нам поют свои</p></p>
+                Это может нам поют свои</p>
             </details>
           </div>
           <div class="${styles.accordionItemTwo}">
@@ -68,26 +79,4 @@ export default function renderAccordion(): void {
   detailsTitle.addEventListener('click', () => {
     accordionItemInteractive.classList.toggle(styles.accordionActive)
   })
-  // requestAnimationFrame(() => {
-  //   if (!details.open) {
-  //     detailsContent.style.maxHeight = '0'
-  //   } else {
-  //     detailsContent.style.maxHeight = `${detailsContent.scrollHeight}px`
-  //   }
-  // })
-  // details.addEventListener('toggle', () => {
-  //   if (details.open) {
-  //     detailsContent.style.maxHeight = '0'
-
-  //     requestAnimationFrame(() => {
-  //       detailsContent.style.maxHeight = `${detailsContent.scrollHeight}px`
-  //     })
-  //   } else {
-  //     detailsContent.style.maxHeight = `${detailsContent.scrollHeight}px`
-
-  //     requestAnimationFrame(() => {
-  //       detailsContent.style.maxHeight = '0'
-  //     })
-  //   }
-  // })
 }
